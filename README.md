@@ -6,4 +6,4 @@ In the project's root directory add the submodule
 
 Format: `git submodule add [git clone URL] [destination directory]`
 
-$ `git submodule add https://github.com/FIUDiscoveryLab/logging.git src/discoverylab/util/loggin/`
+$ `git submodule add https://github.com/FIUDiscoveryLab/logging.git src/discoverylab/util/logging/`
