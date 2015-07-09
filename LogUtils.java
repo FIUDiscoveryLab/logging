@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 public class LogUtils {
 	
 //	private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME); Java Utils Logger = No Bueno
-	private final static Logger logger = LoggerFactory.getLogger(LogUtils.class);
+	private static Logger logger = LoggerFactory.getLogger(LogUtils.class);
 	
 	private static final String LOG_PREFIX = "discoverylab";
 	private static final int LOG_PREFIX_LENGTH = LOG_PREFIX.length();
@@ -30,27 +30,39 @@ public class LogUtils {
 	}
 	
 	public static void LOGI(final String tag, String message) {
-		logger.info(tag, message);
+//		logger.info(tag, message);
+		logger = LoggerFactory.getLogger(tag);
+		logger.info(message);
 	}
 	
 	public static void LOGI(final String tag, String message, Throwable cause) {
-		logger.info(tag, message, cause);
+//		logger.info(tag, message, cause);
+		logger = LoggerFactory.getLogger(tag);
+		logger.info(message);
 	}
 	
 	public static void LOGW(final String tag, String message) {
-		logger.warn(tag, message);
+//		logger.warn(tag, message);
+		logger = LoggerFactory.getLogger(tag);
+		logger.info(message);
 	}
 	
 	public static void LOGW(final String tag, String message, Throwable cause) {
-		logger.warn(tag, message, cause);
+//		logger.warn(tag, message, cause);
+		logger = LoggerFactory.getLogger(tag);
+		logger.info(message);
 	}
 	
 	public static void LOGE(final String tag, String message){
-		logger.error(tag, message);
+//		logger.error(tag, message);
+		logger = LoggerFactory.getLogger(tag);
+		logger.info(message);
 	}
 	
 	public static void LEGE(final String tag, String message, Throwable cause){
-		logger.error(tag, message, cause);
+//		logger.error(tag, message, cause);
+		logger = LoggerFactory.getLogger(tag);
+		logger.info(message);
 	}
 	
 	private LogUtils() {
